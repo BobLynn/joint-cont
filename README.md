@@ -1,3 +1,3 @@
 # joint_cont
 
-A project in Lab.
+一個實驗室的項目。
