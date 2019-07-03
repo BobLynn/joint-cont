@@ -3,9 +3,11 @@
 一個實驗室的項目。
 
 目標
+
 	實現continue的功能於手臂上
 
 分項目標
+
 	Python基本練習
 
 	ROS-Python
