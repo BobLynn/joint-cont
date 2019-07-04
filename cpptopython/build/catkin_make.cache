@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/sniperbob/joint_cont/cpptopython/devel -DCMAKE_INSTALL_PREFIX=/home/sniperbob/joint_cont/cpptopython/install -G Unix Makefiles
