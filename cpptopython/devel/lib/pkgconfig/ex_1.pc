@@ -1,0 +1,8 @@
+prefix=/home/sniperbob/joint_cont/cpptopython/devel
+
+Name: ex_1
+Description: Description of ex_1
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/sniperbob/joint_cont/cpptopython/devel/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/sniperbob/joint_cont/cpptopython/install
+
+Name: turtle_fb
+Description: Description of turtle_fb
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/sniperbob/joint_cont/cpptopython/install/lib 
+Requires: 

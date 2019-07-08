@@ -6,7 +6,7 @@ from geometry_msgs.msg import Twist
 from turtlesim.msg import Pose 
 
 def callback(data):
-    rospy.loginfo("position = %f,%f", data.x, data.y) 
+    rospy.loginfo("position = %f,%f", data.x, data.y)
     rospy.loginfo("direction = %f", data.theta)
 
 def listener():
@@ -15,4 +15,4 @@ def listener():
     rospy.spin()
 
 if __name__ == '__main__':
-listener()
+    listener()
