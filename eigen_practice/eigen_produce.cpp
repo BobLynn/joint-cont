@@ -35,4 +35,23 @@ int main()
   std::cout << "The vector v is of size " << d.size() << std::endl;
   std::cout << "As a matrix, v is of size "
             << d.rows() << "x" << d.cols() << std::endl;
+
+
+
+
+  //--------矩陣的基本運算（加減運算）--------
+  Matrix2d e;
+  e << 1, 2,
+       3, 4;
+  MatrixXd f(2,2);
+  f << 2, 3,
+       1, 4;
+  std::cout << "e + f =\n" << e + f << std::endl;
+  std::cout << "e - f =\n" << e - f << std::endl;
+  std::cout << "Doing e += f;" << std::endl;
+  e += f;
+  std::cout << "Now e =\n" << e << std::endl;
+  Vector3d x(1,2,3);
+  Vector3d w(1,0,0);
+  std::cout << "-x + w - x =\n" << -x + w - x << std::endl;
 }
