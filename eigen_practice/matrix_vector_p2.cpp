@@ -24,9 +24,9 @@ int main ()
 
 //----矩陣的轉置、共軛矩陣、餘因子矩陣----
     MatrixXcf b = MatrixXcf::Random(2,2);
-    cout << "Here is the matrix b\n" << b << endl;
-    cout << "Here is the matrix b^T\n" << b.transpose() << endl;
-    cout << "Here is the conjugate of b\n" << b.conjugate() << endl;
-    cout << "Here is the matrix b^*\n" << b.adjoint() << endl;
+    std::cout << "Here is the matrix b\n" << b << std::endl;
+    std::cout << "Here is the matrix b^T\n" << b.transpose() << std::endl;
+    std::cout << "Here is the conjugate of b\n" << b.conjugate() << std::endl;
+    std::cout << "Here is the matrix b^*\n" << b.adjoint() << std::endl;
 
     }
