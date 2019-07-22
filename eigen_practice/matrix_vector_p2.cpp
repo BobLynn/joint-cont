@@ -40,4 +40,12 @@ int main ()
     std::cout << "Here is mat.maxCoeff():  " << mat.maxCoeff()  << std::endl;
     std::cout << "Here is mat.trace():     " << mat.trace()     << std::endl;
 
+//----換位和結合----
+
+    MatrixXcf g = MatrixXcf::Random(2,2);
+    cout << "Here is the matrix g\n" << g << endl;
+    cout << "Here is the matrix g^T\n" << g.transpose() << endl;
+    cout << "Here is the conjugate of g\n" << g.conjugate() << endl;
+    cout << "Here is the matrix g^*\n" << g.adjoint() << endl;
+
     }
