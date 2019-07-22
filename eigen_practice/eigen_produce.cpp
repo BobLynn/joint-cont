@@ -1,6 +1,7 @@
 #include <iostream>
 #include <Eigen/Dense>
 using namespace Eigen;
+using namespace std;
 int main()
 {
   //--------矩陣與向量--------
@@ -14,7 +15,7 @@ int main()
   v(0) = 4;
   v(1) = v(0) - 1;
   std::cout << "Here is the vector v:\n" << v << std::endl;
-
+  cout << endl;
 
   //--------向量的大小設定--------
   Vector2d a (5.0,6.0);
@@ -22,7 +23,7 @@ int main()
   Vector4d c (5.0,6.0,7.0,8.0);
   std::cout<< "Here is a group of vector a,b,c:\n" << a << "\n\n" 
            << b << "\n\n" << c << "\n\n" << std::endl;
-
+  cout << endl;
 
   //--------矩陣與向量的大小顯示--------
   MatrixXd n(2,5);
@@ -35,6 +36,7 @@ int main()
   std::cout << "The vector v is of size " << d.size() << std::endl;
   std::cout << "As a matrix, v is of size "
             << d.rows() << "x" << d.cols() << std::endl;
+  cout << endl;
 
 
 
@@ -54,4 +56,14 @@ int main()
   Vector3d x(1,2,3);
   Vector3d w(1,0,0);
   std::cout << "-x + w - x =\n" << -x + w - x << std::endl;
+  cout << std::endl;
+  //----換位和結合----
+
+  MatrixXcf g = MatrixXcf::Random(2,2);
+  cout << "Here is the matrix a\n" << g << endl;
+  cout << "Here is the matrix a^T\n" << g.transpose() << endl;
+  cout << "Here is the conjugate of a\n" << g.conjugate() << endl;
+  cout << "Here is the matrix a^*\n" << g.adjoint() << endl;
+
+  
 }
