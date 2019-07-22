@@ -56,14 +56,5 @@ int main()
   Vector3d x(1,2,3);
   Vector3d w(1,0,0);
   std::cout << "-x + w - x =\n" << -x + w - x << std::endl;
-  cout << std::endl;
-  //----換位和結合----
-
-  MatrixXcf g = MatrixXcf::Random(2,2);
-  cout << "Here is the matrix a\n" << g << endl;
-  cout << "Here is the matrix a^T\n" << g.transpose() << endl;
-  cout << "Here is the conjugate of a\n" << g.conjugate() << endl;
-  cout << "Here is the matrix a^*\n" << g.adjoint() << endl;
-
-  
+  cout << std::endl; 
 }
