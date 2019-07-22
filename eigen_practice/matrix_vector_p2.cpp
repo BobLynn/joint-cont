@@ -1,8 +1,7 @@
 //----Matrix and vector arithmetic Part2----
 #include <iostream>
 #include <Eigen/Dense>
-
-
+using namespace std;
 
 //----矩陣、向量的乘除（乘以小於一的數）----
 using namespace Eigen;
@@ -19,7 +18,7 @@ int main ()
     std::cout << "Doing v *= 2;" << std::endl;
     v *=2;
     std::cout << "Now v = \n" << v << std::endl;
-
+    std::cout << std::endl;
 
 
 //----矩陣的轉置、共軛矩陣、餘因子矩陣----
@@ -28,5 +27,17 @@ int main ()
     std::cout << "Here is the matrix b^T\n" << b.transpose() << std::endl;
     std::cout << "Here is the conjugate of b\n" << b.conjugate() << std::endl;
     std::cout << "Here is the matrix b^*\n" << b.adjoint() << std::endl;
+    std::cout << std::endl;
+//----矩陣的自身計算評估----
+
+    Eigen::Matrix2d mat;
+    mat << 1, 2,
+           3, 4;
+    std::cout << "Here is mat.sum():       " << mat.sum()       << std::endl;
+    std::cout << "Here is mat.prod():      " << mat.prod()      << std::endl;
+    std::cout << "Here is mat.mean():      " << mat.mean()      << std::endl;
+    std::cout << "Here is mat.minCoeff():  " << mat.minCoeff()  << std::endl;
+    std::cout << "Here is mat.maxCoeff():  " << mat.maxCoeff()  << std::endl;
+    std::cout << "Here is mat.trace():     " << mat.trace()     << std::endl;
 
     }
