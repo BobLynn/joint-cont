@@ -48,4 +48,59 @@ int main ()
     cout << "Here is the conjugate of g\n" << g.conjugate() << endl;
     cout << "Here is the matrix g^*\n" << g.adjoint() << endl;
 
-    }
+//----矩陣的轉置----
+
+    MatrixXf h (2,3);
+    h << 1,2,3,4,5,6;
+    cout << "Here is the initial matrix h:\n" << h <<endl;
+
+    h.transposeInPlace();
+    cout << "and after being transposed:\n"<< h << endl;
+
+//----矩陣-矩陣以及矩陣-向量乘法----
+    Matrix2d mat;
+    mat << 1, 2,
+           3, 4;
+    Vector2d u(-1,1), v(2,0);
+    std::cout << "Here is mat*mat:\n" << mat*mat << std::endl;
+    std::cout << "Here is mat*u:\n" << mat*u << std::endl;
+    std::cout << "Here is u^T*mat:\n" << u.transpose()*mat << std::endl;
+    std::cout << "Here is u^T*v:\n" << u.transpose()*v << std::endl;
+    std::cout << "Here is u*v^T:\n" << u*v.transpose() << std::endl;
+    std::cout << "Let's multiply mat by itself" << std::endl;
+    mat = mat*mat;
+    std::cout << "Now mat is mat:\n" << mat << std::endl;
+
+//----點積與叉積----
+
+    Vector3d x(1,2,3);
+    Vector3d y(0,1,2);
+    cout << "Dot product: " << x.dot(y) << endl;
+    double dp = x.adjoint()*y; // automatic conversion of the inner product to a scalar
+    cout << "Dot product via a matrix product: " << dp << endl;
+    cout << "Cross product:\n" << x.cross(y) << endl;
+
+//----基本算數減少操作----
+
+    Eigen::Matrix2d mat;
+    mat << 1, 2,
+           3, 4;
+    cout << "Here is mat.sum():       " << mat.sum()       << endl;
+    cout << "Here is mat.prod():      " << mat.prod()      << endl;
+    cout << "Here is mat.mean():      " << mat.mean()      << endl;
+    cout << "Here is mat.minCoeff():  " << mat.minCoeff()  << endl;
+    cout << "Here is mat.maxCoeff():  " << mat.maxCoeff()  << endl;
+    cout << "Here is mat.trace():     " << mat.trace()     << endl;
+
+    Matrix3f m = Matrix3f::Random();
+    std::ptrdiff_t i, j;
+    float minOfM = m.minCoeff(&i,&j);
+    cout << "Here is the matrix m:\n" << m << endl;
+    cout << "Its minimum coefficient (" << minOfM 
+         << ") is at position (" << i << "," << j << ")\n\n";
+    RowVector4i v = RowVector4i::Random();
+    int maxOfV = v.maxCoeff(&i);
+    cout << "Here is the vector v: " << v << endl;
+    cout << "Its maximum coefficient (" << maxOfV 
+         << ") is at position " << i << endl;
+}
