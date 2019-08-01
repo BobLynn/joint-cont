@@ -15,13 +15,13 @@
 
 	把之前ros的作業, C++的node都改成用python寫
 
-	把windows form程式中, Cmatrix的部分改成用Eigen
+	把windows form程式中, Cmatrix的部分改成用Eigen	(可選）
 
 	把matlab的波形顯示程式改成python
 
 	把上述兩個部分改成ros
 
-	C++ node計算，python  node顯示
+	C++ node計算，python node顯示
 
 	實現continue功能在手臂上
 
