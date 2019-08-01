@@ -117,8 +117,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/sniperbob/joint_cont/cpptopython/build/gtest/cmake_install.cmake")
-  include("/home/sniperbob/joint_cont/cpptopython/build/ex_1/cmake_install.cmake")
-  include("/home/sniperbob/joint_cont/cpptopython/build/turtle_fb/cmake_install.cmake")
 
 endif()
 
