@@ -15,7 +15,7 @@
 
 	把之前ros的作業, C++的node都改成用python寫
 
-	把windows form程式中, Cmatrix的部分改成用Eigen	(可選）
+	把windows form程式中, Cmatrix的部分改成用Eigen（可選）
 
 	把matlab的波形顯示程式改成python
 
